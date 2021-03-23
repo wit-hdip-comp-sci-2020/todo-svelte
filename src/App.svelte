@@ -14,6 +14,7 @@
     const todo = {
       text: todoText,
       date: new Date().toLocaleString("en-IE"),
+      id: uuidv4()
     };
     todoItems.push(todo);
     todoItems = [...todoItems];
