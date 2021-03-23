@@ -1,7 +1,11 @@
 <script>
 	let todoText = "";
+	let todoItems = [];
+
 	function addTodo() {
-		console.log(todoText)
+		console.log(todoText);
+		todoItems.push(todoText);
+		todoItems = [...todoItems];
 	}
 </script>
 
@@ -21,4 +25,19 @@
 		</fieldset>
 		<button on:click={addTodo} class="uk-button uk-button-default">Add Todo</button>
 	</div>
+	<table class="uk-table uk-table-divider">
+		<caption> Items To Do :</caption>
+		<thead>
+			<tr>
+				<th>Task</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each todoItems as todo}
+				<tr>
+					<td> {todo} </td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
 </div>
