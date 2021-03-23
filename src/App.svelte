@@ -1,4 +1,8 @@
 <script>
+	let todoText = "";
+	function addTodo() {
+		console.log(todoText)
+	}
 </script>
 
 <div class="uk-container">
@@ -12,9 +16,9 @@
 		<fieldset class="uk-fieldset">
 			<legend class="uk-legend">Enter todo item</legend>
 			<div class="uk-margin">
-				<input class="uk-input" placeholder="Todo">
+				<input bind:value={todoText} class="uk-input" placeholder="Todo">
 			</div>
 		</fieldset>
-		<button class="uk-button uk-button-default">Add Todo</button>
+		<button on:click={addTodo} class="uk-button uk-button-default">Add Todo</button>
 	</div>
 </div>
