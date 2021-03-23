@@ -6,6 +6,7 @@
 		console.log(todoText);
 		todoItems.push(todoText);
 		todoItems = [...todoItems];
+		todoText = "";
 	}
 </script>
 
