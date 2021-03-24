@@ -1,6 +1,8 @@
 <script>
   export let caption;
   export let items;
+  export let deleteSupport = false;
+  console.log(deleteSupport);
 </script>
 
 <table class="uk-table uk-table-divider" id="done-table">
@@ -16,6 +18,9 @@
       <tr>
         <td> {todo.text} </td>
         <td> {todo.date}</td>
+        {#if deleteSupport}
+          <button class="uk-button uk-button-default">Delete</button>
+        {/if}
       </tr>
     {/each}
   </tbody>
