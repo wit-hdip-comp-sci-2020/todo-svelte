@@ -1,6 +1,7 @@
 <script>
-  import { v4 as uuidv4 } from 'uuid';
+  import {v4 as uuidv4} from 'uuid';
   import Title from "./Title.svelte"
+  import TodoList from "./TodoList.svelte";
 
   let todoText = "";
   let todoItems = [];
@@ -38,39 +39,6 @@
     </fieldset>
     <button on:click={addTodo} class="uk-button uk-button-default">Add Todo</button>
   </div>
-  <table class="uk-table uk-table-divider">
-    <caption> Items To Do :</caption>
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      {#each todoItems as todo}
-        <tr>
-          <td> {todo.text} </td>
-          <td> {todo.date} </td>
-          <button on:click={deleteTodo(todo.id)}  class="uk-button uk-button-default">Delete</button>
-        </tr>
-      {/each}
-    </tbody>
-  </table>
-  <table class="uk-table uk-table-divider" id="done-table">
-    <caption> Items Completed :</caption>
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      {#each doneItems as todo}
-        <tr>
-          <td> {todo.text} </td>
-          <td> {todo.date}</td>
-        </tr>
-      {/each}
-    </tbody>
-  </table>
+  <TodoList items="{todoItems}"/>
+  <TodoList items="{doneItems}"/>
 </div>
