@@ -1,5 +1,6 @@
 <script>
   import { v4 as uuidv4 } from 'uuid';
+  import Title from "./Title.svelte"
 
   let todoText = "";
   let todoItems = [];
@@ -27,12 +28,7 @@
 </script>
 
 <div class="uk-container">
-  <div class="uk-flex uk-flex-center uk-flex-middle uk-margin">
-    <div class="uk-width-2-3@m uk-card uk-card-default uk-padding-small uk-text-center">
-      <div class="title"> Simple Todo List</div>
-      <div class="uk-text-muted uk-text-small">Fun things to do</div>
-    </div>
-  </div>
+  <Title />
   <div class="uk-width-1-2@m uk-card uk-card-default uk-padding">
     <fieldset class="uk-fieldset">
       <legend class="uk-legend">Enter todo item</legend>
