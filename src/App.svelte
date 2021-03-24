@@ -30,7 +30,7 @@
 
 <div class="uk-container">
   <Title title="Simple Todo List" subTitle="Fun Things to do"/>
-  <AddTodoForm addTodo="{addTodo}" />
+  <AddTodoForm {addTodo} />
   <TodoList caption="Items Todo" items="{todoItems}" deleteHandler="{deleteTodo}"/>
   <TodoList caption="Items Done" items="{doneItems}"/>
 </div>
