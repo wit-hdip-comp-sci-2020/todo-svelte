@@ -39,6 +39,6 @@
     </fieldset>
     <button on:click={addTodo} class="uk-button uk-button-default">Add Todo</button>
   </div>
-  <TodoList items="{todoItems}"/>
-  <TodoList items="{doneItems}"/>
+  <TodoList caption="Items Todo" items="{todoItems}"/>
+  <TodoList caption="Items Done" items="{doneItems}"/>
 </div>

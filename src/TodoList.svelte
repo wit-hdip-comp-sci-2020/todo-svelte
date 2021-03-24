@@ -1,9 +1,10 @@
 <script>
+  export let caption;
   export let items;
 </script>
 
 <table class="uk-table uk-table-divider" id="done-table">
-  <caption> Items Todo :</caption>
+  <caption> {caption} :</caption>
   <thead>
     <tr>
       <th>Task</th>
