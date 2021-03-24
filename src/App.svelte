@@ -28,7 +28,7 @@
 </script>
 
 <div class="uk-container">
-  <Title />
+  <Title title="Simple Todo List" subTitle="Fun Things to do"/>
   <div class="uk-width-1-2@m uk-card uk-card-default uk-padding">
     <fieldset class="uk-fieldset">
       <legend class="uk-legend">Enter todo item</legend>
